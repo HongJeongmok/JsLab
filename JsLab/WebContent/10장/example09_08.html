@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>$.ajax로 jsp 파일 로드하기</title>
+<style>
+td {
+	border: 1px solid gray;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.js"
+	type="text/javascript"></script>
+
+<script type="text/javascript">
+	/*
+	 - $.post() 함수는 post방식으로 서버와 통신하는 jQuery 함수이다.
+	 - $.post() 함수는 서버의 welcome.jsp 페이지를 post방식으로 요청한다.
+	 */
+
+	$(function() {
+		$("#member").on("submit", function() {//"확인"버튼을 눌렀을 때..
+			var username = $("#username").val(); // 서버로 보낼 데이터를 입력창에서 얻어온다.
+			var passwd = $("#passwd").val();
+			var sendData = 'username=' + username + '&passwd=' + passwd;
+			alert(sendData);
+
+			$.post( // 문자열 형식의 데이터를 welcome.jsp 파일로 보낸다.
+			"welcome.jsp", sendData, function(msg) {
+				$('#txt1').html(msg);
+			});
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="member.jsp" method="post" name="member" id="member">
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>
+				<label for="username">이름</label> <input type="text" name="username"
+					id="username" />
+			</p>
+			<p>
+				<label for="passwd">비밀번호</label> <input type="password"
+					name="passwd" id="passwd" />
+			</p>
+			<p>
+				<input type="submit" value="확인" />
+			</p>
+		</fieldset>
+	</form>
+	<h1 id="txt1"></h1>
+</body>
+</html>
