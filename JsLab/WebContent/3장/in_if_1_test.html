@@ -2,37 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> 중첩 if문 </title>
+<title>중첩 if문</title>
 <script type="text/javascript">
-//<![CDATA[
-  var id="easy1004"; // 아이디
-  var pw="112233";  // 비밀번호
-  
-  //방문자에게 아이디를 입력받습니다.
-  var user_id=prompt("아이디는?","");  
-  //방문자에게 비밀번호를 입력받습니다.
-  var user_pw=prompt("비밀번호는?","");
-  
-  if(id==user_id){ // 아이디가 일치했을 경우
-  
-     
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-  }else{ // 아이디가 일치하지 않을 경우
-  
-  
-  
-  
-  } //바깥 if문의 else문 종료
-//]]>
+	//<![CDATA[
+	var id = "easy1004"; // 아이디
+	var pw = "112233"; // 비밀번호
+
+	//방문자에게 아이디를 입력받습니다.
+	var user_id = prompt("아이디는?", "");
+	//방문자에게 비밀번호를 입력받습니다.
+	var user_pw = prompt("비밀번호는?", "");
+
+	if (id == user_id) { // 아이디가 일치했을 경우
+		if(pw == user_pw) {
+			document.write(user_id+"님 반갑습니다!");
+		} else {
+			alert("비밀번호가 일치하지 않습니다.")  // 팝업 윈도우즈를 띄운다.
+			location.reload();  // 브라우저에서 새로 고침 기능을 실행한다.
+		}
+
+	} else { // 아이디가 일치하지 않을 경우
+		alert("아이디가 일치하지 않습니다.");
+		location.reload();
+
+	} //바깥 if문의 else문 종료
+	//]]>
 </script>
 </head>
 <body>

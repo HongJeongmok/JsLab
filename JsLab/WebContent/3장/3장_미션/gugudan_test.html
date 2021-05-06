@@ -11,7 +11,33 @@
 		<tr>
 
 			<script language="javascript">
-				
+				/* document.write("<tr>");
+				for (var dan = 2; dan <= 9; dan++) {
+					document.write("<th>" + dan + "단" + "</th>");
+				}
+				document.write("</tr>");
+
+				for (var n = 1; n <= 9; n++) {
+					document.write("<tr>");
+					for (var dan = 2; dan <= 9; dan++) {
+
+						document.write("<td>" + dan + "*" + n + "=" + dan * n + "</td>");
+					}
+					document.write("</tr>");
+				} */
+
+				for (var dan = 2; dan <= 9; dan++) {
+					document.write("<th>" + dan + "단" + "</th>");
+				}
+				document.write("</tr><tr>");
+
+				for (var dan = 2; dan <= 9; dan++) {
+					document.write("<td>");
+					for (var n = 1; n <= 9; n++) {
+						document.write(dan + "*" + n + "=" + dan * n + "<br>");
+					}
+					document.write("</td>");
+				}
 			</script>
 
 		</tr>

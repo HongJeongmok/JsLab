@@ -2,26 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> 비교 연산자 </title>
+<title>비교 연산자</title>
 <script type="text/javascript">
- 
+		var a = 10;
+		var b = 20;
+		var c = 10;
+		var d = "20";
+		var result;
+		
+		result = a>b;  // false
+		document.write(result, "<br/>");
 
+		result = a<b;  // true
+		document.write(result, "<br/>");
 
+		result = a<=b;  // true
+		document.write(result, "<br/>");
 
- 
- 
- 
- document.write(result,"<br/>");
- 
- document.write(result,"<br/>");
- 
- document.write(result,"<br/>");
- 
- document.write(result,"<br/>");
- 
- document.write(result,"<br/>");
- 
- document.write(result,"<br/>");
+		result = b==d;  // true
+		document.write(result, "<br/>");
+
+		result = a!=b; // true
+		document.write(result, "<br/>");
+
+		result = b===d;  // false
+		document.write(result, "<br/>");
 </script>
 </head>
 <body>

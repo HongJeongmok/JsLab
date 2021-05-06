@@ -2,29 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> 내장객체 </title>
+<title>내장객체</title>
 <script type="text/javascript">
-//<![CDATA[  
+	//<![CDATA[
+	var tv = new Object(); // 생성된 객체를 변수 tv가 참조한다.
+	
+	// tv 객체의 속성을 정의한다.
+	tv.width = "30cm";
+	tv.height = "25cm";
+	tv.weight = "20kg";
+	tv.color = "black";
 
+	document.write(tv.width, "<br />"); //tv에 너비 속성을 출력합니다.
+	document.write(tv.height, "<br />"); //tv에 높이 속성을 출력합니다.
+	document.write(tv.weight, "<br />"); //tv에 무게 속성을 출력합니다.
+	document.write(tv.color, "<br />"); //tv에 컬러 속성을 출력합니다.
+	
+	// tv 객체의 메소드(기능)를 정의한다.
+	tv.off = function() {
+		document.write("전원 off", "<br/>");
+	}
 
-
-
-
-
-
-
-
-
-
-
-
- document.write(tv.width,"<br />"); //tv에 너비 속성을 출력합니다.
- document.write(tv.height,"<br />"); //tv에 높이 속성을 출력합니다.
- document.write(tv.weight,"<br />"); //tv에 무게 속성을 출력합니다.
- document.write(tv.color,"<br />"); //tv에 컬러 속성을 출력합니다.
-  
- tv.off(); //tv에 off 기능을 실행합니다.
-//]]>
+	tv.off(); // tv에 off 기능을 실행합니다.
+	//]]>
 </script>
 </head>
 <body>

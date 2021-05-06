@@ -2,29 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> 숫자 객체 </title>
+<title>숫자 객체</title>
 <script type="text/javascript">
-//<![CDATA[
-var num1=3.456789;
-var num2=700000;
-var num3="30.5px";
-var num4=40;
+	//<![CDATA[
+	var num1 = 3.456789;
+	var num2 = 700000;
+	var num3 = "30.5px";
+	var num4 = 40;
 
+	document.write("표현 가능한 가장 큰 수:" + Number.MAX_VALUE, "<br />");
+	document.write("표현 가능한 가장 작은 수:" + Number.MIN_VALUE, "<br />");
+	
+	document.write(num1.toString(), "<br />");
+	document.write(num4.valueOf(), "<br />");
 
+	document.write(num1.toFixed(2), "<br />");
+	document.write(num1.toPrecision(2), "<br />");
+	document.write(parseInt(num3) + num4, "<br />");  // 30 + 40 = 70
+	document.write(parseFloat(num3) + num4, "<br />");  // 30.5 + 40 = 70.5
 
-
-
-
-
-
-
-
-
-
-
-
-
-//]]>
+	//]]>
 </script>
 </head>
 
