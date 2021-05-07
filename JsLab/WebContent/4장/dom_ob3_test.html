@@ -2,30 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> DOM 객체 </title>
+<title>DOM 객체</title>
 </head>
 <body>
-<div id="wrap">
-   <p>내용1</p>
-   <p>내용2</p>
-   <p>내용3</p>
-   <p>내용4</p>
-</div>
-<script type="text/javascript">
-//<![CDATA[
+	<div id="wrap">
+		<p>내용1</p>
+		<p>내용2</p>
+		<p>내용3</p>
+		<p>내용4</p>
+	</div>
+	<script type="text/javascript">
+		//<![CDATA[
+		document.getElementById("wrap").firstChild.style.color = "red";
 
+		var p = document.getElementsByTagName("p")[1];
+		p.nextSibling.style.backgroundColor = "yellow";
 
-
-
-
-
-
-
-
-
-
-
-//]]>
-</script>
+		//]]>
+	</script>
 </body>
 </html>
