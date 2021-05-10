@@ -2,30 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title> 탐색 선택자 </title>
+<title>탐색 선택자</title>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-//<![CDATA[
-$(function(){
-
-
-
-
-
-});
-//]]>
+	//<![CDATA[
+	$(function() {
+		$("a[title]").css("background-color", "yellow");
+		$("a[href='http://www.nate.com']").css("background-color", "pink");
+		$("a[href^='mailto']").css("background-color", "aqua");
+		$("a[href$='net']").css("background-color", "purple");
+		$("a[href*='google']").css("background-color", "orange");
+	});
+	//]]>
 </script>
 </head>
 <body>
-   <h1>탐색 선택자</h1>
-   <ul>
-      <li>
-         <a href="http://www.naver.com" title="네이버 이동">네이버</a>
-      </li>
-      <li><a href="mailto:ciycc@naver.com">관리자에게</a></li>
-      <li><a href="http://www.nate.com">네이트</a></li>
-      <li><a href="http://www.daum.net">다음</a></li>
-      <li><a href="http://www.google.com">구글</a></li>
-   </ul>
+	<h1>탐색 선택자</h1>
+	<ul>
+		<li><a href="http://www.naver.com" title="네이버 이동">네이버</a></li>
+		<li><a href="mailto:ciycc@naver.com">관리자에게</a></li>
+		<li><a href="http://www.nate.com">네이트</a></li>
+		<li><a href="http://www.daum.net">다음</a></li>
+		<li><a href="http://www.google.com">구글</a></li>
+	</ul>
 </body>
 </html>

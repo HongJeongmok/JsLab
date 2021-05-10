@@ -30,12 +30,117 @@
 				$("#id").focus();
 				return false;
 			}
+
+			if ($.trim($("#pwd").val()) == "") {
+				alert("비밀번호를 입력하세요!");
+				$("#pwd").val("").focus();
+				return false;
+			}
+
+			if ($.trim($("#pwd2").val()) == "") {
+				alert("비밀번호를 한번 더 입력하세요!");
+				$("#pwd2").val("").focus();
+				return false;
+			}
+
+			if ($("#pwd").val() != $("#pwd2").val()) {
+				alert("비밀번호가 같지 않습니다!");
+				$("#pwd").val("");
+				$("#pwd2").val("");
+				$("#pwd").focus();
+				return false;
+			}
+
+			if ($.trim($("#name").val()) == "") {
+				alert("이름을 입력하세요!");
+				$("#name").val("").focus();
+				return false;
+			}
+
+			if ($.trim($("#tel1").val()) == "") {
+				alert("전화번호를 입력하세요!");
+				$("#tel1").val("").focus();
+				return false;
+			}
+			if (isNaN($("#tel1").val())) {
+				alert("전화번호는 숫자만 입력 하세요!");
+				$("#tel1").val("").focus();
+				return false;
+			}
 			
+			if ($.trim($("#tel2").val()) == "") {
+				alert("전화번호를 입력하세요!");
+				$("#tel2").val("").focus();
+				return false;
+			}
+			if (isNaN($("#tel2").val())) {
+				alert("전화번호는 숫자만 입력 하세요!");
+				$("#tel2").val("").focus();
+				return false;
+			}
 			
+			if ($.trim($("#tel3").val()) == "") {
+				alert("전화번호를 입력하세요!");
+				$("#tel3").val("").focus();
+				return false;
+			}
+			if (isNaN($("#tel3").val())) {
+				alert("전화번호는 숫자만 입력 하세요!");
+				$("#tel3").val("").focus();
+				return false;
+			}
+
+			if (!tel1_pattern.test($("#tel1").val())) {
+				alert("전화번호의 첫째 자리는 010, 011, 016, 017, 018, 019만 가능합니다!")
+				$("#tel1").val("")
+				$("#tel1").focus();
+				return false;
+			}
 			
+			 if ($("#tel2").val().length != 4) {
+	                alert("전화번호의 둘째 자리는 4자리 숫자로 입력하세요!");
+	                $("#tel2").val("");
+	                $("#tel2").focus();
+	                return false;
+			 }
+			 
+			 if ($("#tel3").val().length != 4) {
+	                alert("전화번호의 셋째 자리는 4자리 숫자로 입력하세요!");
+	                $("#tel3").val("");
+	                $("#tel3").focus();
+	                return false;
+			 }
+			 
+			if ($.trim($("#addr").val()) == "") {
+				alert("주소를 입력하세요!");
+				$("#addr").val("").focus();
+				return false;
+			}
+
+			if ($.trim($("#job").val()) == "") {
+				alert("직업을 선택하세요!");
+				$("job").val("").focus();
+				return false;
+			}
+
+			if ($("#man").is(":checked") == false && ($("#woman").is(":checked") == false)) {
+				alert("성별을 선택하세요!");
+				return false;
+			}
+
+			if ($("#email").val() == "") {
+                alert("이메일을 입력하세요!");
+                $("#email").focus();
+                return false;
+			}
+
+			if ($.trim($("#intro").val()) == "") {
+				alert("자기 소개를 입력 하세요!");
+				$("#intro").focus();
+				return false;
+			}
 			
-			
-			
+			alert("ok");
 
 		}); // submit() end
 

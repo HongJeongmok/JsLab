@@ -34,12 +34,29 @@
 					"on.png");
 		}
 		//id 값이"btn3"인 요소에 마우스가 벗어나거나 또는 포커스를 잃었을 때  
-		if (window.addEventListener) {
+/* 		if (window.addEventListener) {
 			btn3.addEventListener("mouseout", chBtn, false);
 			btn3.addEventListener("blur", chBtn, false);
 		} else { // IE8.0 이하 버전
 			btn3.attachEvent("onmouseout", chBtn);
-			btn3.attachEvent("onblur", chBtn);
+			btn3.attachEvent("onblur", chBtn); */
+			
+            btn3.addEventListener("mouseout", chBtn);
+            btn3.addEventListener("blur", chBtn);
+            btn3.addEventListener("mouseover", chBtn);
+            btn3.addEventListener("focus", chBtn);
+
+            function chBtn(event) {
+                switch (event.type) {
+                    case "mouseout":
+                    case "blur":
+                        this.children[0].src = this.children[0].src.replace("out.png", "on.png");
+                        break;
+                    case "mouseover":
+                    case "focus":
+                        this.children[0].src = this.children[0].src.replace("on.png", "out.png");
+                        break;
+                }
 		}
 	}
 	//]]>
