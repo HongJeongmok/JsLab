@@ -7,7 +7,19 @@
 <script type="text/javascript">
 	//<![CDATA[
 	$(function() {
-
+		$("h1").attr("align", "left");
+		$("li:first").text("첫 번째 리스트");
+		$("h2 > strong").css("color", "red");
+		$("#two").prev().css("color", "blue");
+		$("#two").next().css("color", "purple");
+		$("#two").parent().css("border", "2px dashed navy");
+		$(".myList").prepend("<li>Front</li>");
+		$(".myList").append("<li>back</li>");
+		$("<li>앞에 삽입</li>").insertBefore(".three");
+		$("<li>뒤에 삽입</li>").insertAfter(".three");
+		$("h2").eq(1).wrap("<div />");
+		$("h2:has('strong')").addClass("tit");
+		$("h2:last").removeClass("tit");
 
 	});
 	//]]>

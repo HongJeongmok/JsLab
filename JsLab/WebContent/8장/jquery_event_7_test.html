@@ -2,29 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title> 이벤트 </title>
+<title>이벤트</title>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-//<![CDATA[
-$(function(){
+	//<![CDATA[
+	$(function() {
+		$("#user_name").focus(); //focus를 강제 발생
 
-
-
-
-
-
-
-
-});
-//]]>
+		$("#user_id").focus(function() { //focus가 이동되었을 때
+			$(this).val("");
+		});
+		$("#user_id").blur(function() { //focus가 사라졌을 때
+			$(this).val("아이디 입력");
+		});
+	});
+	//]]>
 </script>
 </head>
 <body>
-   <p>
-      <input type="text" name="user_name" id="user_name" />
-   </p>
-   <p>
-      <input type="text" name="user_id" id="user_id" value="아이디 입력" />
-   </p>
+	<p>
+		<input type="text" name="user_name" id="user_name" />
+	</p>
+	<p>
+		<input type="text" name="user_id" id="user_id" value="아이디 입력" />
+	</p>
 </body>
 </html>

@@ -2,31 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> Ajax </title>
+<title>Ajax</title>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-//<![CDATA[
-$(function(){
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-});
-//]]>
+	//<![CDATA[
+	$(function() {
+		$("#member").on("submit", function() {
+			var d = $(this).serialize();  // 폼 요소에 전송할 데이터를 재가공한다.
+			alert(d);  // "username=aaa&passwd=aaa"
+
+			$.ajax({
+				url : "welcome.jsp",  // 데이터 전송 및 요청할 URL 주소
+				type : "post",  // 데이터 전송 방식
+				data : d,  // 전송할 데이터
+				success : function(result) {
+					$("#txt1").html(result);
+				}
+			});
+			return false;
+		});
+	});
+	//]]>
 </script>
 </head>
 <body>
-	<form action="member.jsp" method="post" name="member" id="member">
+	<form action="welcome.jsp" method="post" name="member" id="member">
 		<fieldset>
 			<legend>회원가입</legend>
 			<p>

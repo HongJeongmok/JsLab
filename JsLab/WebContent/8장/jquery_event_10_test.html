@@ -2,21 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title> 이벤트 </title>
+<title>이벤트</title>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-//<![CDATA[
-$(window).scroll(function(){ //스크롤바가 이동될 때마다
-
-});
-//]]>
+	//<![CDATA[
+	$(window).scroll(function() { //스크롤바가 이동될 때마다
+		$("#txt").text($(this).scrollTop()); //스크롤바 이동 높잇값이
+	});
+	//]]>
 </script>
 <style type="text/css">
-   body{height:3000px;}
-   #txt{position:fixed;top:10px;left:10px;}
+body {
+	height: 3000px;
+}
+
+#txt {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+}
 </style>
 </head>
 <body>
-   <p id="txt">0</p>
+	<p id="txt">0</p>
 </body>
 </html>
