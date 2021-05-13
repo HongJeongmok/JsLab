@@ -1,70 +1,89 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Swipe 2</title>
 <meta http-equiv="X-UA-Compatible" content="IE=8">
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/> 
+<meta name='viewport'
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 <style type="text/css">
-/* Swipe ÌîåÎü¨Í∑∏Ïù∏ ÏÇ¨Ïö©ÏùÑ ÏúÑÌï¥ ÌïÑÏöîÌïú Ïä§ÌÉÄÏùº(CSS) */
+/* Swipe «√∑Ø±◊¿Œ ªÁøÎ¿ª ¿ß«ÿ « ø‰«— Ω∫≈∏¿œ(CSS) */
 .swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
 }
+
 .swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap > li {
-  float:left;
-  width:100%;
-  position: relative;
+	overflow: hidden;
+	position: relative;
 }
 
-/* ÏßÅÏ†ë Ï∂îÍ∞ÄÌïú Ïä§ÌÉÄÏùº(CSS) */
-li{list-style:none;}
-img{width:100%; max-width:100%;}
-#mySwipe {max-width:500px;margin:0 auto;}
-.btn_wrap{text-align:center;padding-top:20px;}
+.swipe-wrap>li {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+/* ¡˜¡¢ √ﬂ∞°«— Ω∫≈∏¿œ(CSS) */
+li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+#mySwipe {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.btn_wrap {
+	text-align: center;
+	padding-top: 20px;
+}
 </style>
-<link href='css/style.css' rel='stylesheet'/>
+<link href='css/style.css' rel='stylesheet' />
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-
+<script src='js/swipe.js'></script>
 <script type="text/javascript">
-$(function(){
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-});
+	$(function() {
+		window.mySwipe = $('#mySwipe').Swipe({
+			startSlide : 0, //√ ±‚ø° √π π¯¬∞ πË≥ ∞° ≥Î√‚µÀ¥œ¥Ÿ.
+			auto : 3000, //3√  ¿Ã»ƒ ¿⁄µø¿∏∑Œ πË≥ ∞° ¿ÃµøµÀ¥œ¥Ÿ.
+			continuous : true, //πË≥ ∞° π›∫πµ«æÓ ∑—∏µµÀ¥œ¥Ÿ.
+			disableScroll : true, //ΩΩ∂Û¿ÃµÂ πË≥ ø° Ω∫≈©∑—πŸ ª˝º∫¿ª ¬˜¥‹Ω√≈µ¥œ¥Ÿ.
+			stopPropagation : true, //«œ¿ß ø‰º“ø° ¿Ã∫•∆Æ ¿¸¥ﬁ¿ª ¬˜¥‹«’¥œ¥Ÿ.
+			callback : function(index, element) {
+			}, //¿Ã∫•∆Æ∞° øœ∑·µ«∏È ƒ›πÈ«‘ºˆ∏¶ Ω««‡«‘.
+			transitionEnd : function(index, element) {
+			} //»≠∏È¿Ã ¿¸»Øµ«∏È ¿Õ∏Ì«‘ºˆ Ω««‡«‘.
+		}).data('Swipe');
+
+		$(".prevBtn").on("click", function() {//¿Ã¿¸ πˆ∆∞¿ª ≈¨∏Ø«ﬂ¿ª ∂ß...
+			mySwipe.prev(); //¿Ã¿¸ πË≥ ∑Œ ¿Ãµø«’¥œ¥Ÿ.
+		});
+
+		$(".nextBtn").on("click", function() {//¥Ÿ¿Ω πˆ∆∞¿ª ≈¨∏Ø«ﬂ¿ª ∂ß...
+			mySwipe.next(); //¥Ÿ¿Ω πË≥ ∑Œ ¿Ãµø«’¥œ¥Ÿ.
+		});
+	});
 </script>
 </head>
 <body>
-<h1>Swipe 2</h1>
-<div id='mySwipe'  class='swipe'>
-  <ul class='swipe-wrap'>
-    <li><img src="images/pic_1.jpg" alt="ÏÇ¨ÏßÑ1" /></li>
-    <li><img src="images/pic_2.jpg" alt="ÏÇ¨ÏßÑ2" /></li>
-    <li><img src="images/pic_3.jpg" alt="ÏÇ¨ÏßÑ3" /></li>
-    <li><img src="images/pic_4.jpg" alt="ÏÇ¨ÏßÑ4" /></li>
-  </ul>
-</div>
-<div class="btn_wrap">
-  <button class="prevBtn">prev</button> 
-  <button class="nextBtn">next</button>
-</div>
+	<h1>Swipe 2</h1>
+	<div id='mySwipe' class='swipe'>
+		<ul class='swipe-wrap'>
+			<li><img src="images/pic_1.jpg" alt="ªÁ¡¯1" /></li>
+			<li><img src="images/pic_2.jpg" alt="ªÁ¡¯2" /></li>
+			<li><img src="images/pic_3.jpg" alt="ªÁ¡¯3" /></li>
+			<li><img src="images/pic_4.jpg" alt="ªÁ¡¯4" /></li>
+		</ul>
+	</div>
+	<div class="btn_wrap">
+		<button class="prevBtn">prev</button>
+		<button class="nextBtn">next</button>
+	</div>
 </body>
 </html>
