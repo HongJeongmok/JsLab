@@ -727,7 +727,9 @@
 				url: rss2json.concat("?", $.param(params)),
 				dataType: "json",
 				success: function (response) {
+						console.log($.param(params));
 					$.each(response.items, function (i, d) {
+							console.log(new Date(d["pubDate"]).getTime());
 						var thumbnail = d["thumbnail"],
 							title = d["title"],
 							pubDate = formatDate(new Date(new Date(d["pubDate"]).getTime() + 32400000)),
@@ -773,5 +775,4 @@
 		})
 	</script>
 </body>
-
 </html>

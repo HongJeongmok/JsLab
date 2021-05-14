@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-translate-customization"
+	content="6f1073ba568f1202-9c8990a4b3025b3e-ga74e3ea243d3f01d-14"></meta>
 <title>AdminLTE 2 | Dashboard</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta
@@ -47,6 +49,22 @@
 <!-- Google Font -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<!-- Google 번역 -->
+<script type="text/javascript">
+	function googleTranslateElementInit() {
+		new google.translate.TranslateElement({
+			pageLanguage : 'ko',
+			includedLanguages : 'en,ja,ko,zh-CN',
+			layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+		}, 'google_translate_element');
+	}
+</script>
+<script type="text/javascript"	src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+	
+</script>
+
+
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
@@ -63,10 +81,11 @@
 				<a href="#" class="sidebar-toggle" data-toggle="push-menu"
 					role="button"> <span class="sr-only">Toggle navigation</span>
 				</a>
-
+				
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
 						<!-- Messages: style can be found in dropdown.less-->
+						<li><div style="margin-top: 11px;" id="google_translate_element"></div></li>
 						<li class="dropdown messages-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <i
 								class="fa fa-envelope-o"></i> <span class="label label-success">4</span>
@@ -514,7 +533,36 @@
 					<li class="active">Dashboard</li>
 				</ol>
 			</section>
-
+			<div id="visual">
+				<div id="mySwipe" class='swipe'>
+					<ul class="touch_banner swipe-wrap" style="text-align: center;">
+						<!-- 배너 목록 -->
+						<li><a href="#"><img src="build/images/visual_img_1.jpg" height="250px"
+								alt="" /></a></li>
+						<li><a href="#"><img src="build/images/visual_img_2.jpg" height="250px"
+								alt="" /></a></li>
+						<li><a href="#"><img src="build/images/visual_img_3.jpg" height="250px"
+								alt="" /></a></li>
+					</ul>
+				</div>
+				<ul class="touch_bullet">
+					<!-- 배너 위치 표시 -->
+					<li><img src="build/images/visual_bullet_on.png" class="active"
+						class="active" alt="" /></li>
+					<li><img src="build/images/visual_bullet_off.png" alt="" /></li>
+					<li><img src="build/images/visual_bullet_off.png" alt="" /></li>
+				</ul>
+				<p class="touch_left_btn">
+					<!-- 이전 버튼 -->
+					<a href="#"> <img src="build/images/visual_btn_left.png" alt="이전 배너" />
+					</a>
+				</p>
+				<p class="touch_right_btn">
+					<!-- 다음 버튼 -->
+					<a href="#"> <img src="build/images/visual_btn_right.png" alt="다음 배너" />
+					</a>
+				</p>
+			</div>
 			<!-- Main content -->
 			<section class="content">
 				<!-- Small boxes (Stat box) -->
@@ -1231,6 +1279,23 @@
 	</script>
 	<!-- Bootstrap 3.3.7 -->
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="build/css/base.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="build/css/main.css" media="all" />
+	<script type="text/javascript" src="build/js/jquery-1.10.2.min.js"></script>
+	<!-- 제이쿼리 라이이브러리 연동 -->
+
+	<link rel="stylesheet" type="text/css" href="build/css/style.css" />
+	<!-- 터치 슬라이드 스타일(CSS) 연동 -->
+	<script type="text/javascript" src="build/js/swipe.js"></script>
+	<!-- 터치 슬라이드 플러그인 연동 -->
+	<script type="text/javascript" src="build/js/jquery.bxslider.min.js"></script>
+	<!-- bxSlider 플러그인 연동 -->
+	<script type="text/javascript" src="build/js/jquery-ui-1.10.4.custom.min.js"></script>
+	<!-- UI 플러그인 연동 -->
+	<script type="text/javascript" src="build/js/jquery.cookie.js"></script>
+	<!-- 쿠키 플러그인 연동 -->
+	<script type="text/javascript" src="build/js/common.js"></script>
+	<script type="text/javascript" src="build/js/main.js"></script>
 	<!-- Morris.js charts -->
 	<script src="bower_components/raphael/raphael.min.js"></script>
 	<script src="bower_components/morris.js/morris.min.js"></script>
